@@ -56,7 +56,6 @@ import versionInfo
 import winUser
 import wx
 import dataclasses
-from . import textUtils
 
 try:
     ROLE_EDITABLETEXT = controlTypes.ROLE_EDITABLETEXT
@@ -95,6 +94,9 @@ def myAssert(condition):
 
 def initConfiguration():
     confspec = {
+        "crackleVolume" : "integer( default=25, min=0, max=100)",
+        "noNextTextChimeVolume" : "integer( default=50, min=0, max=100)",
+        "noNextTextMessage" : "boolean( default=False)",
     }
     config.conf.spec["treeNav"] = confspec
 
